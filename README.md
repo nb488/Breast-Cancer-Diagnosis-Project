@@ -40,3 +40,8 @@ Result: linear model at 95, catboost at 93
 achieved good results in catboost and SVM RBF, specifically 94% and 96% without overfitting
 
 !!!Made a shap plot and used the best model (Logistic regression) on the test data. To analyze next day
+
+
+7/7/2025
+
+!!! Added comments, cleaning up code and added some descriptions 

@@ -45,3 +45,8 @@ achieved good results in catboost and SVM RBF, specifically 94% and 96% without 
 7/7/2025
 
 !!! Added comments, cleaning up code and added some descriptions 
+
+7/8/2025
+
+!!! made the virtual environment (again?)
+!!! Added more descriptions

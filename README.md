@@ -1,52 +1,9 @@
-Trial Log: 
+Date: June-July 2025
 
+**Predicting Breast Cancer Diagnosis Using Cell Nuclei Morphology**
 
-7/3/2025
+This project focuses on building and evaluating a machine learning model to classify breast cancer diagnoses (malignant or benign) based on the morphology of cell nuclei specimens. The dataset comes from the Diagnostic Wisconsin Breast Cancer Database and was accessed via Kaggle (Link). The dataset includes various features for cell morphology, including radius, texture, perimeter and symmetry. For each characteristic, the mean, standard error and worst/largest value were documented in separate features. Cell nuclei were observed using fine needle aspiration (FNA) of breast masses.
 
-!!!this try: 
+Malignant cell nuclei typically exhibit larger size and irregular shapes. Additional changes may include alterations in surface, volume, density, structure, and homogeneity (Link). Prior research has linked specific cell morphologies to increased risk of metastasis and tumorigenicity (Link) which facilitates widespread cancerous invasions to other organs such as bones, lungs, liver and brain (Link). By integrating articifical intelligence and transforming the diagnosis process with machine learning models, identification of breast cancer identification can be performed more quickly and with greater precision, guided by historical data. This project aims to help patients receive faster diagnoses, support doctors' findings and increase the efficency in healthcare processes.
 
-keep only worst and mean
-discard radius + perimeter
-discard compactness + concavity
-
-based on correlation to y, heatmap and random forest importance features.
-
-Result: linear model doing very well 96.5% on test data (+ not overfitting) at C=100, catboost doing the best of the ensembles still (~93%)
-
-
-7/4/2025
-
-!!!Try adding back the _se features, because I'm worried that I made the data to simple/general and that is why random forest and gradient boosting are overfitting.
-keep discarding radius and perimeter
-keep discarding compactness + concavity
-
-Result: linear model whent down to 94% while catboost whent down to 93%. The rest on the ensembles are overfitting
-
-Using just the mean data is consistently doing not as good, so I am going to drop this
-
-!!!It looks like texture_mean and texture_worst are very correlated (heatmap)
-Try and remove texture_mean (texture_worst is more correlated to the target value)
-keep _se features out
-discard radius + perimeter
-discard compactness + concavity
-
-Result: linear model at 95, catboost at 93
-
-
-7/6/2025
-
-!!!Move onto hyperparamter optimization
-
-achieved good results in catboost and SVM RBF, specifically 94% and 96% without overfitting
-
-!!!Made a shap plot and used the best model (Logistic regression) on the test data. To analyze next day
-
-
-7/7/2025
-
-!!! Added comments, cleaning up code and added some descriptions 
-
-7/8/2025
-
-!!! made the virtual environment (again?)
-!!! Added more descriptions
+The model will be trained on cell nuclei morphology to classify samples as malignant or benign using classification-supervised machine learning. It can be used as a tool to efficiently classify samples. It will also highlight the most influential features contributing to the classification, thereby enhancing the interpretability of the output.
